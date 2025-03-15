@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <title>Ritmo - Login</title>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Anton&family=Assistant:wght@200..800&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Oxanium:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+                
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+         h1{
+            font-family: "Anton", sans-serif;
+        }
+
+        p, h2{
+            font-family: "Poppins", sans-serif;
+        }
+
+        #formu{
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        @keyframes slow {
+            0%{
+                opacity: 0;
+                transform: translateY(-15px);
+            }
+
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        form{
+            animation: slow 0.9s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient-to-br from-[#0F0D13] to-[#121016] to-[#131117] to-[#141218] to-[#151319] to-[#16141A] h-screen">
+    <div id="formu" class="bg-[#1A181E] flex flex-col items-center justify-center w-[350px] sm:w-[450px] rounded-lg pb-6">
+        
+        <div class="flex items-center pt-7">
+            <a href="../../index.html"><i class="bi bi-arrow-left text-gray-400 text-2xl transform translate-x-[-85px] translate-y-[-30px] sm:translate-x-[-135px] absolute cursor-pointer hover:text-[#AA00FF] transition ease-in-out duration-150"></i></a>
+            <h1 class="text-white drop-shadow-[0_0_1px_white] text-5xl tracking-wider">RITMO</h1>
+        </div>
+
+        <div class="flex mt-8 text-white bg-[#3A393D] py-1 px-1 rounded-lg">
+            <button id="btnEntrar" class="text-lg font-semibold py-2 w-[150px] lg:w-[200px] rounded-lg bg-[#AA00FF]">Entrar</button>
+            <button id="btnCadastro" class="text-lg font-semibold py-2 w-[150px] lg:w-[200px] rounded-lg focus:bg-[#AA00FF]">Cadastrar</button>
+        </div>
+
+        <form class="w-[88%]" action="">
+            <div class="pt-6 flex flex-col w-[100%%] space-y-5">
+
+                <div id="inpt-nome" class="relative inline-block w-full hidden">
+                    <i class="bi bi-person-fill absolute left-4 top-1/2 transform -translate-y-1/2 text-xl text-[#AA00FF]"></i>
+                    <input class="bg-[#3A393D] py-4 rounded-lg px-12 w-full text-white placeholder-gray-400 outline-none focus:border border-[#AA00FF]" type="text" placeholder="Nome" required>
+                </div>
+
+                <div class="relative inline-block w-full">
+                    <i class="bi bi-envelope absolute left-4 top-1/2 transform -translate-y-1/2 text-xl text-[#AA00FF]"></i>
+                    <input class="bg-[#3A393D] py-4 rounded-lg px-12 w-full text-white placeholder-gray-400 outline-none focus:border border-[#AA00FF]" type="email" placeholder="E-mail" required>
+                </div>
+            
+                <!-- Campo de Senha -->
+                <div class="relative inline-block w-full">
+                    <i class="bi bi-lock absolute left-4 top-1/2 transform -translate-y-1/2 text-xl text-[#AA00FF]"></i>
+                    <input id="inpt-senha" class="bg-[#3A393D] py-4 rounded-lg px-12 w-full text-white placeholder-gray-400 outline-none focus:border border-[#AA00FF]" type="password" minlength="4" maxlength="12" placeholder="Senha" required>
+                </div>
+
+                <!-- Campo de Confirmação de Senha (oculto por padrão) -->
+                <div id="inpt-confirm" class="relative inline-block w-full hidden">
+                    <i class="bi bi-lock absolute left-4 top-1/2 transform -translate-y-1/2 text-xl text-[#AA00FF]"></i>
+                    <input id="confirm-senha" class="bg-[#3A393D] py-4 rounded-lg px-12 w-full text-white placeholder-gray-400 outline-none focus:border border-[#AA00FF]" type="password" minlength="4" maxlength="12" placeholder="Confirmar Senha">
+                </div>
+
+                <div class="flex justify-center">
+                    <input id="inptEntrar" class="bg-[#AA00FF] py-4 w-[100%] mt-6 rounded-lg text-white font-semibold hover:translate-y-[-2px] hover:bg-[#9D08FE] transition ease-in-out duration-150 cursor-pointer" type="submit" value="Entrar">
+                </div>
+
+                <div class="flex justify-center">
+                    <a id="link" class="pt-2 pb-2 text-[#AA00FF] cursor-pointer" href="">Esqueceu sua senha?</a>
+                </div>
+        </form>
+
+<script>
+    let btnEntrar = document.getElementById('btnEntrar');
+    let btnCad = document.getElementById('btnCadastro');
+
+    let inptNome = document.getElementById('inpt-nome');
+    let inptConfirm = document.getElementById('inpt-confirm');
+    let inptEntrar = document.getElementById('inptEntrar');
+    let form = document.querySelector('form');
+
+    let inptSenha = document.getElementById('inpt-senha');
+    let confirmSenha = document.getElementById('confirm-senha');
+
+    let link = window.document.getElementById('link')
+
+    // Alternar entre Login e Cadastro
+    btnEntrar.onclick = () => {
+        btnEntrar.style.background = '#AA00FF';
+        btnCad.style.background = '#3A393D';
+        inptNome.style.display = 'none';
+        inptConfirm.style.display = 'none';
+        inptEntrar.value = 'Entrar';
+        link.style.display = 'block'
+    };
+
+    btnCad.onclick = () => {
+        btnEntrar.style.background = '#3A393D';
+        btnCad.style.background = '#AA00FF';
+        inptNome.style.display = 'block';
+        inptConfirm.style.display = 'block';
+        inptEntrar.value = 'Cadastrar';
+        link.style.display = 'none'
+    };
+
+    
+    form.addEventListener('submit', (e) => {
+        if (inptEntrar.value === 'Cadastrar') {
+            if (inptSenha.value !== confirmSenha.value) {
+                e.preventDefault(); 
+                alert('Erro! As senhas inseridas não são iguais.');
+            }
+        }
+    });
+</script>
+
+    </div>
+</body>
+</html>
