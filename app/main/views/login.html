@@ -87,8 +87,12 @@
                     <input id="confirm-senha" class="bg-[#3A393D] py-4 rounded-lg px-12 w-full text-white placeholder-gray-400 outline-none focus:border border-[#AA00FF]" type="password" minlength="4" maxlength="12" placeholder="Confirmar Senha">
                 </div>
 
+                <p id="senhaInco" class="text-red-500 hidden">Senha Incorreta!</p>
+
                 <div class="flex justify-center">
                     <input id="inptEntrar" class="bg-[#AA00FF] py-4 w-[100%] mt-6 rounded-lg text-white font-semibold hover:translate-y-[-2px] hover:bg-[#9D08FE] transition ease-in-out duration-150 cursor-pointer" type="submit" value="Entrar">
+
+                    <input id="inptCadastrar" class="bg-[#AA00FF] py-4 w-[100%] mt-6 rounded-lg text-white font-semibold hover:translate-y-[-2px] hover:bg-[#9D08FE] transition ease-in-out duration-150 cursor-pointer hidden" type="submit" value="Cadastrar">
                 </div>
 
                 <div class="flex justify-center">
@@ -103,6 +107,7 @@
     let inptNome = document.getElementById('inpt-nome');
     let inptConfirm = document.getElementById('inpt-confirm');
     let inptEntrar = document.getElementById('inptEntrar');
+    let inptCadastrar = document.getElementById('inptCadastrar');
     let form = document.querySelector('form');
 
     let inptSenha = document.getElementById('inpt-senha');
@@ -110,31 +115,36 @@
 
     let link = window.document.getElementById('link')
 
+    let senhaInco = window.document.getElementById('senhaInco');
+
     // Alternar entre Login e Cadastro
     btnEntrar.onclick = () => {
         btnEntrar.style.background = '#AA00FF';
         btnCad.style.background = '#3A393D';
         inptNome.style.display = 'none';
         inptConfirm.style.display = 'none';
-        inptEntrar.value = 'Entrar';
         link.style.display = 'block'
+        senhaInco.style.display = 'none'
+        inptEntrar.style.display = 'block'
+        inptCadastrar.style.display = 'none'
     };
 
     btnCad.onclick = () => {
         btnEntrar.style.background = '#3A393D';
         btnCad.style.background = '#AA00FF';
         inptNome.style.display = 'block';
-        inptConfirm.style.display = 'block';
-        inptEntrar.value = 'Cadastrar';
+        inptCadastrar.style.display = 'block'
         link.style.display = 'none'
+        inptConfirm.style.display = 'block';
+        inptEntrar.style.display = 'none'
     };
 
     
     form.addEventListener('submit', (e) => {
-        if (inptEntrar.value === 'Cadastrar') {
+        if (inptCadastrar.style.display == 'block') {
             if (inptSenha.value !== confirmSenha.value) {
                 e.preventDefault(); 
-                alert('Erro! As senhas inseridas não são iguais.');
+                senhaInco.style.display = 'block'
             }
         }
     });
