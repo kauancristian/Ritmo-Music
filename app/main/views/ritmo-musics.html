@@ -92,6 +92,7 @@
 
                 btnMenu.onclick = () => {
                     btnMenu.style.opacity = '0' 
+                    btnMenu.style.transform = 'translateY(-45px)'
                     menu.style.display = 'block'
 
                     setTimeout(() => {
@@ -99,7 +100,11 @@
                     },10);
                 }
 
-               
+                btnFechar.addEventListener('click', () => {
+                    menu.style.transform = 'translateX(-70px)'
+                    btnMenu.style.opacity = '1'
+                    btnMenu.style.transform = 'translateY(0px)'
+                }, 10)
             </script>
             
         </main>
@@ -114,15 +119,22 @@
                 <p class="text-gray-400 text-sm">Thales Alberto</p>
             </div>
         </div>
+        <!-- Sessão de Play -->
         <div class="flex space-x-6 text-2xl">
+
+            <audio id="audio" src="../assets/audios/Filho Meu - Thalles Roberto ( Lançamento Sejam Cheios do Espírito Santo ).mp3"></audio>
+
             <i class="fa-solid fa-backward cursor-pointer hover:text-[#A640E6]"></i>
             <i id="i-play" class="fa-solid fa-play cursor-pointer hover:text-[#A640E6]"></i>
             <i id="pause" class="fa-solid fa-pause hover:text-[#A640E6] hidden cursor-pointer"></i>
             <i class="fa-solid fa-forward cursor-pointer hover:text-[#A640E6]"></i>
+
         </div>
-        <div class="flex items-center space-x-2">
-            <i class="fa-solid fa-volume-up"></i>
-            <input type="range" min="0" max="100" class="cursor-pointer">
+        <div class="hidden lg:block">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-volume-up"></i>
+                <input type="range" min="0" max="100" class="cursor-pointer">
+            </div>
         </div>
     </div>
 
@@ -130,14 +142,18 @@
         let play = window.document.getElementById('i-play');
         let pause = window.document.getElementById('pause');
 
+        let audio = window.document.getElementById('audio')
+
         play.onclick = () => {
             pause.style.display = 'block'
             play.style.display = 'none'   
+            audio.play();
         };
 
         pause.onclick = () => {
             play.style.display = 'block'
             pause.style.display = 'none'
+            audio.pause();
         }
     </script>
 </body>
