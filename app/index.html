@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Ritmo - Bem-Vindo</title>
 
@@ -176,143 +177,149 @@
         </div>
     </div>
 
-    <div id="planos" class="bg-gradient-to-br from-[#0F0D13] to-[#100E14] to-[#100E14] to-[#110F15] to-[#110F15] to-[#121016] pb-20">
-        <h2 class="text-3xl text-center font-semibold pt-16 lg:pt-10 bg-gradient-to-r from-[#9D06FF] to-[#8800CC] to-[#AA00FF] to-[#AF7CCC] bg-clip-text text-transparent">Nossos Planos</h2>
-
+    <div id="planos" class="bg-gradient-to-br from-[#0F0D13] via-[#100E14] to-[#121016] pb-24">
+        <h2 class="text-3xl text-center font-semibold pt-16 lg:pt-10 bg-gradient-to-r from-[#9D06FF] via-[#8800CC] to-[#AF7CCC] bg-clip-text text-transparent">Nossos Planos</h2>
+    
+        <div id="planos" class="bg-gradient-to-br from-[#0F0D13] via-[#100E14] to-[#121016] pb-24">
+            <h2 class="text-3xl text-center font-semibold pt-16 lg:pt-10 bg-gradient-to-r from-[#9D06FF] via-[#8800CC] to-[#AF7CCC] bg-clip-text text-transparent">Nossos Planos</h2>
         
-        <div class="container max-w-sm lg:max-w-[100%] w-1/2 overflow-hidden flex justify-center mx-auto pt-20 relative">
-            <div id="carrosel-container" class="flex justify-center lg:space-x-8 relative">
-
-                <!-- Plano 1 -->
-                <div class="bg-[#1B191F] rounded-lg overflow-hidden pb-12 relative">
-                    <p class="bg-[#A640E6] text-black font-semibold w-[140px] p-1.5 rounded-br-lg">R$ 0 por 1 mês</p>
-                    <div class="mx-5">
-                        <div class="space-y-5 pt-10">
-                            <div>
-                                <h1 class="text-white drop-shadow-[0_0_1px_purple] text-xl tracking-widest border-b w-[30px] border-b-[#A640E6]">RITMO</h1>
-                                <p class="font-semibold text-3xl pt-2">Beats </p>
+            <div class="container max-w-xs lg:max-w-6xl mx-auto pt-20 relative text-white">
+                <!-- Container do carrossel -->
+                <div class="relative overflow-hidden">
+                    <div id="carrosel-container" class="carousel-container flex w-full lg:space-x-4 transition-transform duration-300">
+                        <!-- Plano 1 -->
+                        <div class="plano bg-[#1B191F] rounded-lg overflow-hidden pb-12 flex-shrink-0 w-full lg:w-[32%] lg:min-w-[300px]">
+                            <p class="bg-[#A640E6] text-black font-semibold w-[140px] p-1.5 rounded-br-lg">R$ 0 por 1 mês</p>
+                            <div class="mx-3 sm:mx-5">
+                                <div class="space-y-5 pt-10">
+                                    <div>
+                                        <h1 class="text-white drop-shadow-[0_0_1px_purple] text-xl tracking-widest border-b w-[30px] border-b-[#A640E6]">RITMO</h1>
+                                        <p class="font-semibold text-3xl pt-2">Beats</p>
+                                    </div>
+                                    <p class="font-semibold text-xl text-green-500">R$ 0 por 1 mês</p>
+                                    <p class="text-gray-400 text-sm">Após o período gratuito, apenas R$ 11,90/mês</p>
+                                </div>
+                                <ul class="pt-10 space-y-2">
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Acesso limitado a playlists.</p></li>
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Qualidade de áudio padrão.</p></li>
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Sem anúncios (apenas durante o período de teste).</p></li>
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Criação de playlists personalizadas.</p></li>
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Acesso a uma seleção de músicas curada.</p></li>
+                                </ul>
                             </div>
-                            <p class="font-semibold text-xl text-green-500">R$ 0 por 1 mês</p>
+                            <div class="flex flex-col items-center space-y-3 justify-center pt-10 text-lg font-semibold">
+                                <button class="bg-[#A953DE] text-black w-[80%] py-2 rounded-full hover:-translate-y-1 transition ease-in-out duration-150">Experimente 1 mês por R$ 0</button>
+                                <button class="w-[80%] py-2 rounded-full border border-gray-400 hover:-translate-y-1 transition ease-in-out duration-150">Pagamento Único</button>
                             </div>
-                            <p class="text-gray-400 text-sm">Após o período gratuito, apenas R$ 11,90/mês</p>
-                        <ul class="pt-10 space-y-2">
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Acesso limitado a playlists.</p>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Qualidade de áudio padrão.</p>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Sem anúncios (apenas durante o período de teste).</p>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Criação de playlists personalizadas.</p>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Acesso a uma seleção de músicas curada.</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-col items-center space-y-3 justify-center pt-10 text-lg font-semibold">
-                        <button class="bg-[#A953DE] text-black w-[80%] py-2 rounded-full hover:translate-y-[-3px] transition ease-in-out duration-150">Experimente 1 mês por R$ 0</button>
-                        <button class="w-[80%] py-2 rounded-full border border-gray-400 hover:translate-y-[-3px] transition ease-in-out duration-150">Pagamento Único</button>
-                    </div>
-                    <p class="text-xs px-2 text-center pt-6">R$ 0 por 1 mês, depois R$ 11,90 por mês. Oferta disponível apenas para quem nunca teve o Premium.</p>
-                </div>
-
-                <!-- Plano - 2 -->
-                <div class="bg-[#1B191F] rounded-lg overflow-hidden pb-12">
-                    <p class="bg-[#A640E6] text-black font-semibold w-[140px] p-1.5 rounded-br-lg">R$ 0 por 1 mês</p>
-                    <div class="mx-5">
-                        <div class="space-y-5 pt-10">
-                            <div>
-                                <h1 class="text-white drop-shadow-[0_0_1px_purple] text-xl tracking-widest border-b w-[30px] border-b-[#A640E6]">RITMO</h1>
-                                <p class="font-semibold text-3xl pt-2">Beats </p>
+                            <p class="text-xs px-2 text-center pt-6">R$ 0 por 1 mês, depois R$ 11,90 por mês. Oferta disponível apenas para quem nunca teve o Premium.</p>
+                            <div class="flex justify-center space-x-4 pt-6">
+                                <button id="avancar-0" onclick="moverCarrossel(1)" class="hidden text-[#A640E6] border-2 border-[#A640E6] hover:shadow-xl transition-all duration-200 py-2 px-4 rounded-full shadow-md">Avançar</button>
                             </div>
-                            <p class="font-semibold text-xl text-green-500">R$ 0 por 1 mês</p>
+                        </div>
+        
+                        <!-- Plano 2 -->
+                        <div class="plano bg-[#1B191F] rounded-lg overflow-hidden pb-12 flex-shrink-0 w-full lg:w-[32%] lg:min-w-[300px]">
+                            <p class="bg-[#A640E6] text-black font-semibold w-[140px] p-1.5 rounded-br-lg">R$ 0 por 1 mês</p>
+                            <div class="mx-3 sm:mx-5">
+                                <div class="space-y-5 pt-10">
+                                    <div>
+                                        <h1 class="text-white drop-shadow-[0_0_1px_purple] text-xl tracking-widest border-b w-[30px] border-b-[#A640E6]">RITMO</h1>
+                                        <p class="font-semibold text-3xl pt-2">Vibe</p>
+                                    </div>
+                                    <p class="font-semibold text-xl text-green-500">R$ 0 por 1 mês</p>
+                                    <p class="text-gray-400 text-sm">Após o período gratuito, apenas R$ 11,90/mês</p>
+                                </div>
+                                <ul class="pt-10 space-y-2">
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Acesso limitado a playlists.</p></li>
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Qualidade de áudio padrão.</p></li>
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Sem anúncios (apenas durante o período de teste).</p></li>
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Criação de playlists personalizadas.</p></li>
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Acesso a uma seleção de músicas curada.</p></li>
+                                </ul>
                             </div>
-                            <p class="text-gray-400 text-sm">Após o período gratuito, apenas R$ 11,90/mês</p>
-                        <ul class="pt-10 space-y-2">
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Acesso limitado a playlists.</p>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Qualidade de áudio padrão.</p>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Sem anúncios (apenas durante o período de teste).</p>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Criação de playlists personalizadas.</p>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Acesso a uma seleção de músicas curada.</p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-col items-center space-y-3 justify-center pt-10 text-lg font-semibold">
-                        <button class="bg-[#A953DE] text-black w-[80%] py-2 rounded-full hover:translate-y-[-3px] transition ease-in-out duration-150">Experimente 1 mês por R$ 0</button>
-                        <button class="w-[80%] py-2 rounded-full border border-gray-400 hover:translate-y-[-3px] transition ease-in-out duration-150">Pagamento Único</button>
-                    </div>
-                    <p class="text-xs px-2 text-center pt-6">R$ 0 por 1 mês, depois R$ 11,90 por mês. Oferta disponível apenas para quem nunca teve o Premium.</p>
-                </div>
-
-
-                <!-- Plano 3 -->
-                <div class="bg-[#1B191F] rounded-lg overflow-hidden pb-12">
-                    <p class="bg-[#A640E6] text-black font-semibold w-[140px] p-1.5 rounded-br-lg">R$ 0 por 1 mês</p>
-                    <div class="mx-5">
-                        <div class="space-y-5 pt-10">
-                            <div>
-                                <h1 class="text-white drop-shadow-[0_0_1px_purple] text-xl tracking-widest border-b w-[30px] border-b-[#A640E6]">RITMO</h1>
-                                <p class="font-semibold text-3xl pt-2">Beats </p>
+                            <div class="flex flex-col items-center space-y-3 justify-center pt-10 text-lg font-semibold">
+                                <button class="bg-[#A953DE] text-black w-[80%] py-2 rounded-full hover:-translate-y-1 transition ease-in-out duration-150">Experimente 1 mês por R$ 0</button>
+                                <button class="w-[80%] py-2 rounded-full border border-gray-400 hover:-translate-y-1 transition ease-in-out duration-150">Pagamento Único</button>
                             </div>
-                            <p class="font-semibold text-xl text-green-500">R$ 0 por 1 mês</p>
+                            <p class="text-xs px-2 text-center pt-6">R$ 0 por 1 mês, depois R$ 11,90 por mês. Oferta disponível apenas para quem nunca teve o Premium.</p>
+                            <div class="flex justify-center space-x-4 pt-6">
+                                <button id="voltar-1" onclick="moverCarrossel(-1)" class="text-[#A640E6] border-2 border-[#A640E6] hover:shadow-xl transition-all duration-200 py-2 px-4 rounded-full shadow-md">Voltar</button>
+                                <button id="avancar-1" onclick="moverCarrossel(1)" class="text-[#A640E6] border-2 border-[#A640E6] hover:shadow-xl transition-all duration-200 py-2 px-4 rounded-full shadow-md">Avançar</button>
                             </div>
-                            <p class="text-gray-400 text-sm">Após o período gratuito, apenas R$ 11,90/mês</p>
-                        <ul class="pt-10 space-y-2">
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Acesso limitado a playlists.</p>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Qualidade de áudio padrão.</p>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Sem anúncios (apenas durante o período de teste).</p>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Criação de playlists personalizadas.</p>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <i class="bi bi-check2 text-green-200"></i>
-                                <p>Acesso a uma seleção de músicas curada.</p>
-                            </li>
-                        </ul>
+                        </div>
+        
+                        <!-- Plano 3 -->
+                        <div class="plano bg-[#1B191F] rounded-lg overflow-hidden pb-12 flex-shrink-0 w-full lg:w-[32%] lg:min-w-[300px]">
+                            <p class="bg-[#A640E6] text-black font-semibold w-[140px] p-1.5 rounded-br-lg">R$ 0 por 1 mês</p>
+                            <div class="mx-3 sm:mx-5">
+                                <div class="space-y-5 pt-10">
+                                    <div>
+                                        <h1 class="text-white drop-shadow-[0_0_1px_purple] text-xl tracking-widest border-b w-[30px] border-b-[#A640E6]">RITMO</h1>
+                                        <p class="font-semibold text-3xl pt-2">Harmony</p>
+                                    </div>
+                                    <p class="font-semibold text-xl text-green-500">R$ 0 por 1 mês</p>
+                                    <p class="text-gray-400 text-sm">Após o período gratuito, apenas R$ 11,90/mês</p>
+                                </div>
+                                <ul class="pt-10 space-y-2">
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Acesso limitado a playlists.</p></li>
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Qualidade de áudio padrão.</p></li>
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Sem anúncios (apenas durante o período de teste).</p></li>
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Criação de playlists personalizadas.</p></li>
+                                    <li class="flex items-center space-x-2"><i class="bi bi-check2 text-green-200"></i><p class="flex-1">Acesso a uma seleção de músicas curada.</p></li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-col items-center space-y-3 justify-center pt-10 text-lg font-semibold">
+                                <button class="bg-[#A953DE] text-black w-[80%] py-2 rounded-full hover:-translate-y-1 transition ease-in-out duration-150">Experimente 1 mês por R$ 0</button>
+                                <button class="w-[80%] py-2 rounded-full border border-gray-400 hover:-translate-y-1 transition ease-in-out duration-150">Pagamento Único</button>
+                            </div>
+                            <p class="text-xs px-2 text-center pt-6">R$ 0 por 1 mês, depois R$ 11,90 por mês. Oferta disponível apenas para quem nunca teve o Premium.</p>
+                            <div class="flex justify-center space-x-4 pt-6">
+                                <button id="voltar-2" onclick="moverCarrossel(-1)" class="text-[#A640E6] border-2 border-[#A640E6] hover:shadow-xl transition-all duration-200 py-2 px-4 rounded-full shadow-md">Voltar</button>
+                                <button id="avancar-2" onclick="moverCarrossel(1)" class="hidden text-[#A640E6] border-2 border-[#A640E6] hover:shadow-xl transition-all duration-200 py-2 px-4 rounded-full shadow-md">Avançar</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex flex-col items-center space-y-3 justify-center pt-10 text-lg font-semibold">
-                        <button class="bg-[#A953DE] text-black w-[80%] py-2 rounded-full hover:translate-y-[-3px] transition ease-in-out duration-150">Experimente 1 mês por R$ 0</button>
-                        <button class="w-[80%] py-2 rounded-full border border-gray-400 hover:translate-y-[-3px] transition ease-in-out duration-150">Pagamento Único</button>
-                    </div>
-                    <p class="text-xs px-2 text-center pt-6">R$ 0 por 1 mês, depois R$ 11,90 por mês. Oferta disponível apenas para quem nunca teve o Premium.</p>
                 </div>
             </div>
         </div>
-    
-    </div>
+        
+        <script>
+            let currentIndex = 0;
+        
+            function moverCarrossel(direction) {
+                const container = document.getElementById('carrosel-container');
+                const items = document.querySelectorAll('.plano');
+                const totalItems = items.length;
+                const itemWidth = items[0].offsetWidth;
+        
+                currentIndex += direction;
+        
+                if (currentIndex >= totalItems) {
+                    currentIndex = 0;
+                } else if (currentIndex < 0) {
+                    currentIndex = totalItems - 1;
+                }
+        
+                const offset = -currentIndex * itemWidth;
+                container.style.transform = `translateX(${offset}px)`;
+        
+                // Atualizar visibilidade dos botões
+                document.querySelectorAll('[id^="voltar-"]').forEach(btn => btn.classList.add('hidden'));
+                document.querySelectorAll('[id^="avancar-"]').forEach(btn => btn.classList.add('hidden'));
+        
+                if (currentIndex === 0) {
+                    document.getElementById('avancar-0').classList.remove('hidden');
+                } else if (currentIndex === 1) {
+                    document.getElementById('voltar-1').classList.remove('hidden');
+                    document.getElementById('avancar-1').classList.remove('hidden');
+                } else if (currentIndex === 2) {
+                    document.getElementById('voltar-2').classList.remove('hidden');
+                }
+            }
+        
+            // Inicializar a visibilidade dos botões
+            moverCarrossel(0);
+        </script>
 
     <div class="pt-16 text-center lg:text-start bg-gradient-to-br from-[#141218] to-[#141218] to-[#1B191F] to-[#1B191F] to-[#1B191F] to-[#1B191F] pb-10">
         <div id="sobre" class="bg-[#1B191F] rounded-lg lg:pt-12 mx-6 lg:mx-12 px-12">
