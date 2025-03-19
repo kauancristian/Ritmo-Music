@@ -107,11 +107,223 @@
                 }, 10)
             </script>
             
-            <div class="p-5">
-                <h2 class="text-2xl font-semibold">Músicas em alta</h2>
+            <div class="lg:p-5">
+                <h2 class="text-2xl font-semibold text-center lg:text-start pt-5">Músicas em alta</h2>
 
-                <div>
+                <!-- Músicas -->
+                <div class="container mx-auto px-4 py-5">
+                    <div class="carousel-container relative overflow-hidden flex items-center justify-center xl:flex-wrap xl:overflow-visible">
+                        <div class="carousel-track flex transition-transform duration-500 ease-in-out xl:flex-wrap xl:gap-4 xl:transform-none">
+                            <!-- Música 1 -->
+                            <div class="carousel-item flex-shrink-0 w-full md:w-1/2 xl:w-auto flex justify-center">
+                                <div class="flex flex-col items-center justify-center">
+                                    <div class="relative group">
+                                        <img id="img-vl" class="w-44 h-44 object-cover cursor-pointer rounded-lg" src="../assets/musicas/velha-infancia.jpg" alt="Velha Infância">
+                                        <i id="ico-vl" class="bi bi-play-circle-fill absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl text-[#A640E6] drop-shadow-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"></i>
+                                    </div>
+                                    <p class="font-semibold pt-2 text-center">Velha Infância</p>
+                                    <p class="text-xs text-center">Tribalistas</p>
+                                </div>
+                            </div>
+                
+                            <!-- Música 2 -->
+                            <div class="carousel-item flex-shrink-0 w-full md:w-1/2 xl:w-auto flex justify-center">
+                                <div class="flex flex-col items-center justify-center">
+                                    <div class="relative group">
+                                        <img id="img-dl" class="w-44 h-44 object-cover cursor-pointer rounded-lg" src="../assets/musicas/diasDeluta.png" alt="Dias de Luta">
+                                        <i id="ico-dl" class="bi bi-play-circle-fill absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl text-[#A640E6] drop-shadow-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"></i>
+                                    </div>
+                                    <p class="font-semibold pt-2 text-center">Dias de Luta, Dias de Glória</p>
+                                    <p class="text-xs text-center">Charlie Brown Jr</p>
+                                </div>
+                            </div>
+                
+                            <!-- Música 3 -->
+                            <div class="carousel-item flex-shrink-0 w-full md:w-1/2 xl:w-auto flex justify-center">
+                                <div class="flex flex-col items-center justify-center">
+                                    <div class="relative group">
+                                        <img id="img-fm" class="w-44 h-44 object-cover cursor-pointer rounded-lg" src="../assets/imgs-menu-biblioteca/thales.jpg" alt="Filho Meu">
+                                        <i id="ico-fm" class="bi bi-play-circle-fill absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl text-[#A640E6] drop-shadow-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"></i>
+                                    </div>
+                                    <p class="font-semibold pt-2 text-center">Filho Meu</p>
+                                    <p class="text-xs text-center">Thales Roberto</p>
+                                </div>
+                            </div>
+                
+                            <!-- Música 4 -->
+                            <div class="carousel-item flex-shrink-0 w-full md:w-1/2 xl:w-auto flex justify-center">
+                                <div class="flex flex-col items-center justify-center">
+                                    <div class="relative group">
+                                        <img id="img-ts" class="w-44 h-44 object-cover cursor-pointer rounded-lg" src="../assets/musicas/tudo-sobre-voce.jpg" alt="É tudo sobre você">
+                                        <i id="ico-ts" class="bi bi-play-circle-fill absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl text-[#A640E6] drop-shadow-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"></i>
+                                    </div>
+                                    <p class="font-semibold pt-2 text-center">É Tudo Sobre Você</p>
+                                    <p class="text-xs text-center">MORADA</p>
+                                </div>
+                            </div>
+                
+                            <!-- Música 5 -->
+                            <div class="carousel-item flex-shrink-0 w-full md:w-1/2 xl:w-auto flex justify-center">
+                                <div class="flex flex-col items-center justify-center">
+                                    <div class="relative group">
+                                        <img id="img-tp" class="w-44 h-44 object-cover cursor-pointer rounded-lg" src="../assets/musicas/tempo-perdido.jpg" alt="Tempo Perdido">
+                                        <i id="ico-tp" class="bi bi-play-circle-fill absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-5xl text-[#A640E6] drop-shadow-lg transition-opacity duration-300 opacity-0 group-hover:opacity-100"></i>
+                                    </div>
+                                    <p class="font-semibold pt-2 text-center">Tempo Perdido</p>
+                                    <p class="text-xs text-center">Legião Urbana</p>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Botões de navegação (apenas até 1300px) -->
+                        <button class="carousel-prev absolute left-2 top-1/2 transform -translate-y-1/2 bg-[#A640E6] text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity duration-300 xl:hidden">❮</button>
+                        <button class="carousel-next absolute right-2 top-1/2 transform -translate-y-1/2 bg-[#A640E6] text-white p-2 rounded-full opacity-75 hover:opacity-100 transition-opacity duration-300 xl:hidden">❯</button>
+                
+                        <!-- Indicadores (dots, apenas até 1300px) -->
+                        <div class="carousel-dots absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2 xl:hidden">
+                            <span class="dot w-2 h-2 bg-gray-400 rounded-full cursor-pointer"></span>
+                            <span class="dot w-2 h-2 bg-gray-400 rounded-full cursor-pointer"></span>
+                            <span class="dot w-2 h-2 bg-gray-400 rounded-full cursor-pointer"></span>
+                            <span class="dot w-2 h-2 bg-gray-400 rounded-full cursor-pointer"></span>
+                            <span class="dot w-2 h-2 bg-gray-400 rounded-full cursor-pointer"></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <style>
+                .carousel-container {
+                    position: relative;
+                    width: 100%;
+                    height: 300px; /* Altura fixa no carrossel */
+                }
+                
+                .carousel-track {
+                    display: flex;
+                    height: 100%;
+                }
+                
+                .carousel-item {
+                    width: 100%; /* Uma música por vez abaixo de 768px */
+                    transition: all 0.5s ease-in-out;
+                }
+                
+                /* Estilização dos dots ativos */
+                .dot.active {
+                    background-color: #A640E6;
+                    width: 3px;
+                    height: 3px;
+                }
+                
+                /* Ajustes para 768px até 1300px (duas músicas) */
+                @media (min-width: 768px) {
+                    .carousel-item {
+                        width: 50%; /* Duas músicas visíveis */
+                    }
+                }
+                
+                /* Desativar carrossel acima de 1300px */
+                @media (min-width: 1300px) {
+                    .carousel-container {
+                        height: auto; /* Remove altura fixa */
+                    }
                     
+                    .carousel-track {
+                        width: 100%; /* Largura normal */
+                        justify-content: center; /* Centraliza os itens */
+                    }
+                    
+                    .carousel-item {
+                        width: auto; /* Itens ocupam apenas o espaço necessário */
+                        transition: none; /* Remove transição */
+                    }
+                }
+                </style>
+                
+                <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const track = document.querySelector('.carousel-track');
+                    const items = document.querySelectorAll('.carousel-item');
+                    const prevBtn = document.querySelector('.carousel-prev');
+                    const nextBtn = document.querySelector('.carousel-next');
+                    const dots = document.querySelectorAll('.dot');
+                    let currentIndex = 0;
+                    const totalItems = items.length;
+                
+                    // Função para verificar se o carrossel deve estar ativo
+                    function isCarouselActive() {
+                        return window.innerWidth < 1300; // Carrossel até 1300px
+                    }
+                
+                    // Determinar quantos itens são visíveis
+                    function getVisibleItems() {
+                        return window.innerWidth >= 768 && window.innerWidth < 1300 ? 2 : 1;
+                    }
+                
+                    function updateCarousel() {
+                        if (!isCarouselActive()) {
+                            track.style.transform = 'translateX(0)'; // Reseta em telas grandes
+                            track.style.width = 'auto'; // Remove largura fixa
+                            return;
+                        }
+                
+                        const containerWidth = document.querySelector('.carousel-container').offsetWidth;
+                        const visibleItems = getVisibleItems();
+                        const itemWidth = containerWidth / visibleItems;
+                        const offset = -currentIndex * itemWidth;
+                        track.style.transform = `translateX(${offset}px)`;
+                        
+                        // Atualizar dots
+                        dots.forEach((dot, index) => {
+                            dot.classList.toggle('active', index === currentIndex);
+                        });
+                
+                        // Habilitar/desabilitar botões
+                        prevBtn.disabled = currentIndex === 0;
+                        nextBtn.disabled = currentIndex >= totalItems - visibleItems;
+                    }
+                
+                    if (isCarouselActive()) {
+                        nextBtn.addEventListener('click', () => {
+                            const visibleItems = getVisibleItems();
+                            if (currentIndex < totalItems - visibleItems) {
+                                currentIndex++;
+                                updateCarousel();
+                            }
+                        });
+                
+                        prevBtn.addEventListener('click', () => {
+                            if (currentIndex > 0) {
+                                currentIndex--;
+                                updateCarousel();
+                            }
+                        });
+                
+                        dots.forEach((dot, index) => {
+                            dot.addEventListener('click', () => {
+                                currentIndex = index;
+                                updateCarousel();
+                            });
+                        });
+                
+                        // Definir largura inicial do track
+                        track.style.width = `${totalItems * (100 / getVisibleItems())}%`;
+                    }
+                
+                    // Ajustar ao redimensionar a tela
+                    window.addEventListener('resize', () => {
+                        if (!isCarouselActive()) {
+                            track.style.transform = 'translateX(0)'; // Reseta em telas grandes
+                            track.style.width = 'auto';
+                        } else {
+                            track.style.width = `${totalItems * (100 / getVisibleItems())}%`; // Ajusta largura no carrossel
+                        }
+                        updateCarousel();
+                    });
+                
+                    // Inicializar
+                    updateCarousel();
+                });
+                </script>
                 </div>
             </div>
         </main>
@@ -120,10 +332,10 @@
     <!-- Player de Música -->
     <div class="fixed bottom-0 w-full bg-[#1B191F] p-4 flex items-center justify-between">
         <div class="flex items-center space-x-4">
-            <img class="w-12 h-12 object-cover" src="../assets/imgs-menu-biblioteca/thales.jpg" alt="Música">
+            <img id="img-musica" class="w-12 h-12 object-cover" src="../assets/imgs-menu-biblioteca/thales.jpg" alt="Música">
             <div>
-                <p class="text-white">Filho Meu</p>
-                <p class="text-gray-400 text-sm">Thales Alberto</p>
+                <p id="nome-musica" class="text-white">Filho Meu</p>
+                <p id="nome-artista" class="text-gray-400 text-sm">Thales Roberto</p>
             </div>
         </div>
         <!-- Sessão de Play -->
@@ -146,22 +358,155 @@
     </div>
 
     <script>
+        // Jogo de Play e Pause
         let play = window.document.getElementById('i-play');
         let pause = window.document.getElementById('pause');
 
-        let audio = window.document.getElementById('audio')
+        let audio = window.document.getElementById('audio');
+
+        let imgMusica = document.getElementById('img-musica');
+        let nomeArtista = document.getElementById('nome-artista');
+        let nomeMusica = document.getElementById('nome-musica');
 
         play.onclick = () => {
-            pause.style.display = 'block'
-            play.style.display = 'none'   
+            pause.style.display = 'block';
+            play.style.display = 'none'; 
             audio.play();
         };
 
         pause.onclick = () => {
-            play.style.display = 'block'
-            pause.style.display = 'none'
+            play.style.display = 'block';
+            pause.style.display = 'none';
             audio.pause();
         }
+
+        // ------------------------------------------
+        // Velha Infância!
+
+        let imgVl = document.getElementById('img-vl');
+        let icoVl = document.getElementById('ico-vl');
+
+        imgVl.onmouseenter = () => {
+            icoVl.style.opacity = '1';
+        }
+
+        imgVl.onmouseout = () => {
+            icoVl.style.opacity = '0';
+        }
+
+        imgVl.onclick = () => {
+            audio.src = '../assets/audios/Iframe Velha Infância (2004 Digital Remaster) [iyJDuJggiEM].mp3';
+            audio.play()
+            imgMusica.src = '../assets/musicas/velha-infancia.jpg';
+            nomeArtista.innerHTML = 'Música • Tribalistas'
+            nomeMusica.innerHTML = 'Velha Infância'
+            pause.style.display = 'block';
+            play.style.display = 'none';
+        }
+
+
+        // ------------------------------------------
+        // Dias de Luta, Dias de Glória
+
+        let imgDl = document.getElementById('img-dl');
+        let icoDl = document.getElementById('ico-dl');
+
+        imgDl.onmouseenter = () => {
+            icoDl.style.opacity = '1';
+        }
+
+        imgDl.onmouseout = () => {
+            icoDl.style.opacity = '0';
+        }
+
+        imgDl.onclick = () => {
+            audio.src = '../assets/audios/Iframe Charlie Brown Jr. - Dias de Luta, Dias de Glória [i4FQJ7Qi14o].mp3';
+            audio.play()
+            imgMusica.src = '../assets/musicas/diasDeluta.png';
+            nomeArtista.innerHTML = 'Charlie Brown Jr'
+            nomeMusica.innerHTML = 'Dias de Luta, Dias de Glória'
+            pause.style.display = 'block';
+            play.style.display = 'none';
+        }
+        
+        // ------------------------------------------
+        // Filho Meu
+
+        let imgfm = document.getElementById('img-fm');
+        let icofm = document.getElementById('ico-fm');
+
+        imgfm.onmouseenter = () => {
+            icofm.style.opacity = '1';
+        }
+
+        imgfm.onmouseout = () => {
+            icofm.style.opacity = '0';
+        }
+
+        imgfm.onclick = () => {
+            audio.src = '../assets/audios/Filho Meu - Thalles Roberto ( Lançamento Sejam Cheios do Espírito Santo ).mp3';
+            audio.play()
+            imgMusica.src = '../assets/imgs-menu-biblioteca/thales.jpg';
+            nomeArtista.innerHTML = 'Thales Roberto'
+            nomeMusica.innerHTML = 'Filho Meu'
+            pause.style.display = 'block';
+            play.style.display = 'none';
+        }
+
+        // ------------------------------------------
+        // É tudo sobre você
+
+        let imgts = document.getElementById('img-ts');
+        let icots = document.getElementById('ico-ts');
+
+        imgts.onmouseenter = () => {
+            icots.style.opacity = '1';
+        }
+
+        imgts.onmouseout = () => {
+            icots.style.opacity = '0';
+        }
+
+        imgts.onclick = () => {
+            audio.src = '../assets/audios/Iframe É TUDO SOBRE VOCÊ _ MORADA (CLIPE OFICIAL) [ePdRgBWhvog].mp3';
+            audio.play()
+            imgMusica.src = '../assets/musicas/tudo-sobre-voce.jpg';
+            nomeArtista.innerHTML = 'MORADA'
+            nomeMusica.innerHTML = 'É Tudo Sobre Você'
+            pause.style.display = 'block';
+            play.style.display = 'none';
+        }
+
+         // ------------------------------------------
+        // Tempo Perdido
+
+        let imgtp = document.getElementById('img-tp');
+        let icotp = document.getElementById('ico-tp');
+
+        imgtp.onmouseenter = () => {
+            icotp.style.opacity = '1';
+        }
+
+        imgtp.onmouseout = () => {
+            icotp.style.opacity = '0';
+        }
+
+        imgtp.onclick = () => {
+            audio.src = '../assets/audios/Iframe Legião Urbana · Tempo perdido [YPLQHeUSX2g].mp3';
+            audio.play()
+            imgMusica.src = '../assets/musicas/tempo-perdido.jpg';
+            nomeArtista.innerHTML = 'Legião Urbana'
+            nomeMusica.innerHTML = 'Tempo Perdido'
+            pause.style.display = 'block';
+            play.style.display = 'none';
+        }
+
+
+
+
+
+        
+
     </script>
 </body>
 </html>
