@@ -79,35 +79,14 @@
         <main class="flex-1 lg:ml-60 p-6">
             <div class="flex items-center space-x-5">
                 <i id="btnMenu" class="bi bi-list text-3xl bg-[#3A393D]/40 py-2 px-3 rounded-full cursor-pointer lg:hidden"></i>
-                <div class="flex items-center w-full lg:w-[40%] bg-[#3A393D] rounded-md px-3">
+                <div id="inpt-search" class="flex items-center w-full lg:w-[40%] bg-[#3A393D] rounded-md px-3">
                     <i class="bi bi-search"></i>
                     <input class="bg-transparent text-white py-2 px-3 lg:py-3 w-full outline-none placeholder-gray-400" type="search" placeholder="Pesquise sua Música">
                 </div>       
             </div>
 
-            <script>
-                let btnMenu = window.document.getElementById('btnMenu')
-                let menu = window.document.getElementById('menu')
-                let btnFechar = window.document.getElementById('fecharMenu')
-
-                btnMenu.onclick = () => {
-                    btnMenu.style.opacity = '0' 
-                    btnMenu.style.transform = 'translateY(-45px)'
-                    menu.style.display = 'block'
-
-                    setTimeout(() => {
-                        menu.style.transform = 'translateX(0px)'
-                    },10);
-                }
-
-                btnFechar.addEventListener('click', () => {
-                    menu.style.transform = 'translateX(-70px)'
-                    btnMenu.style.opacity = '1'
-                    btnMenu.style.transform = 'translateY(0px)'
-                }, 10)
-            </script>
             
-            <div class="lg:p-5">
+            <div id="conteudo" class="lg:p-5 transition ease-in-out duration-500">
                 <h2 class="text-2xl font-semibold text-center lg:text-start pt-5">Músicas em alta</h2>
 
                 <!-- Músicas -->
@@ -189,6 +168,42 @@
                         </div>
                     </div>
                 </div>
+
+                <script>
+                    let btnMenu = window.document.getElementById('btnMenu')
+                    let menu = window.document.getElementById('menu')
+                    let btnFechar = window.document.getElementById('fecharMenu')
+    
+                    const conteudo = document.getElementById('conteudo')
+                    const inptSearch = document.getElementById('inpt-search')
+    
+                    btnMenu.onclick = () => {
+                        btnMenu.style.opacity = '0' 
+                        btnMenu.style.transform = 'translateY(-45px)'
+                        menu.style.display = 'block'
+    
+                        setTimeout(() => {
+                            menu.style.transform = 'translateX(0px)'
+                        },10);
+    
+                        conteudo.style.marginLeft = '40px'
+                        if(window.matchMedia("(max-width: 420px)").matches) {
+                            inptSearch.style.width = '70%'
+                        }
+                    }
+    
+                    btnFechar.addEventListener('click', () => {
+                        menu.style.transform = 'translateX(-70px)'
+                        btnMenu.style.opacity = '1'
+                        btnMenu.style.transform = 'translateY(0px)'
+    
+                        conteudo.style.marginLeft = '0px'
+                        inptSearch.style.width = '100%'
+                        }, 10);
+    
+                </script>
+
+
                 
                 <style>
                 .carousel-container {
@@ -238,6 +253,8 @@
                     }
                 }
                 </style>
+
+
                 
                 <script>
                 document.addEventListener('DOMContentLoaded', () => {
@@ -501,12 +518,8 @@
             play.style.display = 'none';
         }
 
-
-
-
-
-        
-
     </script>
+
+
 </body>
 </html>
