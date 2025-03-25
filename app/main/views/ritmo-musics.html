@@ -47,7 +47,7 @@
     
     <div class="flex">
         <!-- Barra Lateral -->
-        <aside id="menu" class="bg-[#1B191F] lg:w-60 h-screen p-4 lg:p-5 fixed hidden lg:block translate-x-[-70px] lg:translate-x-0 transition ease-in-out duration-300">
+        <aside id="menu" class="bg-[#1B191F] lg:w-60 h-screen p-4 lg:p-5 fixed hidden lg:block translate-x-[-70px] lg:translate-x-0 transition ease-in-out duration-300 z-[500]">
             <h1 class="text-white text-4xl tracking-widest border-b w-[30px] border-b-[#A640E6] font-semibold hidden lg:block">RITMO</h1>
             <nav class="mt-6 space-y-6 flex flex-col items-center lg:items-start">
                 <i id="fecharMenu" class="bi bi-x-lg text-xl translate-y-[-5px] cursor-pointer lg:hidden"></i>
@@ -77,20 +77,21 @@
         
         <!-- Conteúdo Principal -->
         <main class="flex-1 lg:ml-60 p-6">
+            <div id="shadow" class="bg-black inset-0 opacity-50 absolute z-10 hidden"></div>
             <div class="flex items-center space-x-5">
-                <i id="btnMenu" class="bi bi-list text-3xl bg-[#3A393D]/40 py-2 px-3 rounded-full cursor-pointer lg:hidden"></i>
-                <div id="inpt-search" class="flex items-center w-full lg:w-[40%] bg-[#3A393D] rounded-md px-3">
+                <i id="btnMenu" class="bi bi-list text-3xl bg-[#3A393D]/40 py-2 px-3 rounded-full cursor-pointer lg:hidden z-10"></i>
+                <div id="inpt-search" class="flex items-center w-full lg:w-[40%] bg-[#3A393D] rounded-md px-3 transition ease-in-out duration-500">
                     <i class="bi bi-search"></i>
                     <input class="bg-transparent text-white py-2 px-3 lg:py-3 w-full outline-none placeholder-gray-400" type="search" placeholder="Pesquise sua Música">
                 </div>       
             </div>
 
             
-            <div id="conteudo" class="lg:p-5 transition ease-in-out duration-500">
+            <div id="conteudo" class="lg:p-5 transition ease-in-out duration-500 z-2">
                 <h2 class="text-2xl font-semibold text-center lg:text-start pt-5">Músicas em alta</h2>
 
                 <!-- Músicas -->
-                <div class="container mx-auto px-4 py-5">
+                <div class="container mx-auto px-4 py-5 z-1">
                     <div class="carousel-container relative overflow-hidden flex items-center justify-center xl:flex-wrap xl:overflow-visible">
                         <div class="carousel-track flex transition-transform duration-500 ease-in-out xl:flex-wrap xl:gap-4 xl:transform-none">
                             <!-- Música 1 -->
@@ -170,35 +171,41 @@
                 </div>
 
                 <script>
-                    let btnMenu = window.document.getElementById('btnMenu')
-                    let menu = window.document.getElementById('menu')
-                    let btnFechar = window.document.getElementById('fecharMenu')
+                    let btnMenu = window.document.getElementById('btnMenu');
+                    let menu = window.document.getElementById('menu');
+                    let btnFechar = window.document.getElementById('fecharMenu');
     
-                    const conteudo = document.getElementById('conteudo')
-                    const inptSearch = document.getElementById('inpt-search')
+                    const conteudo = document.getElementById('conteudo');
+                    const inptSearch = document.getElementById('inpt-search');
+
+                    const shadow = document.getElementById('shadow');
     
                     btnMenu.onclick = () => {
-                        btnMenu.style.opacity = '0' 
-                        btnMenu.style.transform = 'translateY(-45px)'
-                        menu.style.display = 'block'
+                        btnMenu.style.opacity = '0';
+                        btnMenu.style.transform = 'translateY(-45px)';
+                        menu.style.display = 'block';
+                        shadow.style.display = 'block';
     
                         setTimeout(() => {
-                            menu.style.transform = 'translateX(0px)'
+                            menu.style.transform = 'translateX(0px)';
                         },10);
     
-                        conteudo.style.marginLeft = '40px'
+                        conteudo.style.transform = 'translateX(40px)'
                         if(window.matchMedia("(max-width: 420px)").matches) {
-                            inptSearch.style.width = '70%'
+                            inptSearch.style.width = '70%';
+                            inptSearch.style.transform = 'translateX(20px)'
                         }
                     }
     
                     btnFechar.addEventListener('click', () => {
-                        menu.style.transform = 'translateX(-70px)'
-                        btnMenu.style.opacity = '1'
-                        btnMenu.style.transform = 'translateY(0px)'
+                        menu.style.transform = 'translateX(-70px)';
+                        btnMenu.style.opacity = '1';
+                        btnMenu.style.transform = 'translateY(0px)';
+                        shadow.style.display = 'none';
     
-                        conteudo.style.marginLeft = '0px'
-                        inptSearch.style.width = '100%'
+                        conteudo.style.transform = 'translateX(0px)';
+                        inptSearch.style.transform = 'translateX(0px)';
+                        inptSearch.style.width = '100%';
                         }, 10);
     
                 </script>
@@ -347,7 +354,7 @@
     </div>
 
     <!-- Player de Música -->
-    <div class="fixed bottom-0 w-full bg-[#1B191F] p-4 flex items-center justify-between">
+    <div class="fixed bottom-0 w-full bg-[#1B191F] p-4 flex items-center justify-between z-[800]">
         <div class="flex items-center space-x-4">
             <img id="img-musica" class="w-12 h-12 object-cover" src="../assets/imgs-menu-biblioteca/thales.jpg" alt="Música">
             <div>
